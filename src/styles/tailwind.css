@@ -5,8 +5,19 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --font-pjs: "Plus Jakarta Sans", sans-serif; 
+
+  --color-primary: #FFFFFF;
+  --color-secondary: #242424;
+  --color-accent: #E52323;
 }
 
 @layer base {

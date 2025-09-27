@@ -1,15 +1,121 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import P from "../components/P.astro";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <section class="font-pjs">
+    <article id="hero" class="bg-accent text-primary pt-60 pb-20">
+      <aside class="mb-30">
+        <div class="font-bold text-7xl text-center">
+          <h1>CHRISTIAN</h1>
+          <h1 class="-mt-4">DITLEVSEN</h1>
+        </div>
+        <p class="text-center text-4xl">multimediadesigner</p>
+      </aside>
+
+      <aside class="text-center w-40 m-auto flex flex-col gap-10">
+        <p class="text-[16px]">there's a cool guy down here</p>
+        <div class="animate-bounce"><p>arrow</p></div>
+      </aside>
+    </article>
+
+    <article id="about" class="bg-secondary text-primary p-5 pt-10 pb-20">
+      <aside id="me" class="mb-10">
+        <div class="bg-amber-300 w-90 h-90 m-auto -rotate-1"><p>image of me</p></div>
+        <div class="mt-10 text-[20px] flex flex-col gap-10">
+          <p>I'm 21, music nerd, fashion enthusiast and I like making cool stuff for screens.</p>
+          <p>A structured and efficient designer with a <span class="font-semibold">love</span> for small details, focused on UX, interaction and prototyping.</p>
+          <p>Currently studying MMD at EK in Copenhagen, looking for internship for my 4th semester.</p>
+        </div>
+      </aside>
+      <aside id="myskills" class="mt-10">
+        <h2 class="text-center font-bold text-[65px]">MY SKILLS</h2>
+        <div id="skillcontainer" class="flex flex-col gap-15 text-center mt-10">
+          <div>
+            <div class="flex flex-row place-content-center gap-2">
+              <div><p>icon</p></div>
+              <h3 class="text-[35px] font-semibold">UX</h3>
+            </div>
+            <p class="text-[16px]">I always factor in the user experience with any design I work on, giving me the ability to ensure a quality experience for the user and understanding how to direct their attention.</p>
+          </div>
+          <div>
+            <div class="flex flex-row place-content-center gap-2">
+              <div><p>icon</p></div>
+              <h3 class="text-[35px] font-semibold">PROJECT LEAD</h3>
+            </div>
+            <p class="text-[16px]">
+              I enjoy getting work done in good time, and a big part of that is proper project management. I&#39;m often the one taking the initiative to create timelines and ensure everyone is aware of the tasks that need to be done.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-row place-content-center gap-2">
+              <div><p>icon</p></div>
+              <h3 class="text-[35px] font-semibold">PROTOTYPING</h3>
+            </div>
+            <p class="text-[16px]">I'm studying primarily web design, though I have much experience coding with Astro, TailwindCSS and AlpineJS which enables me to prototype a wide range of designs.</p>
+          </div>
+          <div>
+            <div class="flex flex-row place-content-center gap-2">
+              <div><p>icon</p></div>
+              <h3 class="text-[35px] font-semibold">FIGMA</h3>
+            </div>
+            <p class="text-[16px]">I&#39;ve spent many hours learning and designing in Figma, allowing me to make intricate prototypes to test and iterate on, aswell as providing a visual reference when coding.</p>
+          </div>
+          <div>
+            <div class="flex flex-row place-content-center gap-2">
+              <div><p>icon</p></div>
+              <h3 class="text-[30px] font-semibold">INTERACTIVE DESIGN</h3>
+            </div>
+            <p class="text-[16px]">Interactions are fundamental to my design, as they serve to guide the user&#39;s journey through a website, aswell as making the design more effective and engaging. Also, animations are fun!</p>
+          </div>
+          <div>
+            <div class="flex flex-row place-content-center gap-2">
+              <div><p>icon</p></div>
+              <h3 class="text-[35px] font-semibold">PHOTOGRAPHY</h3>
+            </div>
+            <p class="text-[16px]">
+              I&#39;ve always had a passion for photography, and though it&#39;s just a hobby, the experience with editing and art directing images, aswell as understanding composition, has translated well to my skills as a Designer.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </article>
+    <article id="projects" class="bg-accent text-primary p-5 pt-10 pb-10">
+      <h2 class="text-center font-bold text-[65px] leading-18">SOME PROJECTS</h2>
+      <aside class="flex flex-col gap-10 mt-10">
+        <div>
+          <p class="font-semibold text-[30px] text-center underline">UX redesign for jeweler</p>
+          <div>arrow</div>
+          <div>image wrapper</div>
+        </div>
+        <div>
+          <p class="font-semibold text-[30px] text-center underline">Design for event</p>
+          <div>arrow</div>
+          <div>image wrapper</div>
+        </div>
+        <div>
+          <p class="font-semibold text-[30px] text-center underline">Campaign site for brand</p>
+          <div>arrow</div>
+          <div>image wrapper</div>
+        </div>
+      </aside>
+    </article>
+    <article id="contact" class="bg-secondary p-5 pt-10 pb-10 text-primary">
+      <aside class="text-center">
+        <h2 class="font-bold text-[65px]">FRIEND?</h2>
+        <h3 class="font-semibold text-[30px] -mt-4">where you can find me</h3>
+      </aside>
+      <div id="iconwrapper" class="m-auto mt-10 grid grid-cols-2 grid-rows-2">
+        <div class="col-start-1 row-start-1"><p>linkedin</p></div>
+        <div class="col-start-2 row-start-1"><p>facebook</p></div>
+        <div class="col-start-1 row-start-2"><p>instagram</p></div>
+        <div class="col-start-2 row-start-2"><p>email</p></div>
+      </div>
+    </article>
+  </section>
 </MainLayout>

@@ -1,0 +1,12 @@
+---
+const { type = "small" } = Astro.props;
+
+const typeClasses = {
+  small: "",
+  medium: "",
+  large: "",
+  xl: "",
+};
+---
+
+<p class:list={[typeClasses[type]]}><slot /></p>
