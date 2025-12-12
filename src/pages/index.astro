@@ -4,16 +4,15 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import P from "../components/P.astro";
 import Arrow from "../../public/arrow.svg";
-import FadeInSection from "../components/FadeInSection.jsx";
 ---
 
 <MainLayout title="Christian Ditlevsen">
   <section class="font-pjs overflow-hidden">
     <article id="hero" class="bg-accent text-primary pt-60 pb-20 md:p-20 md:pb-10 md:grid md:grid-cols-12">
       <aside class="mb-30 md:mb-20">
-        <div class="font-bold text-7xl text-center md:text-[12vw] md:text-left md:col-start-1 md:col-span-9 animate-fade-down">
-          <h1 class="hover:italic">CHRISTIAN</h1>
-          <h1 class="-mt-4 md:-mt-[3.1vw] md:tracking-hero hover:italic md:pl-[9.3vw]">DITLEVSEN</h1>
+        <div class="text-7xl text-center md:text-[12vw] md:text-left md:col-start-1 md:col-span-9 animate-fade-down">
+          <h1 class="hover:animate-herohover">CHRISTIAN</h1>
+          <h1 class="-mt-4 md:-mt-[3.1vw] md:tracking-hero hover:animate-herohover md:pl-[9.3vw]">DITLEVSEN</h1>
         </div>
         <p class="text-center text-4xl md:text-[6vw] md:mt-5 animate-fade-down animate-delay-200">multimediadesigner</p>
       </aside>
@@ -27,77 +26,70 @@ import FadeInSection from "../components/FadeInSection.jsx";
     <article id="about" class="bg-secondary text-primary p-5 pt-10 pb-20 lg:p-10 lg:pt-30">
       <aside id="me" class="mb-20 lg:grid lg:grid-cols-12 lg:mb-40">
         <div class="w-90 h-90 m-auto -rotate-1 lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:w-[35vw] lg:h-auto"><img src="/christian.jpg" alt="picture of me" /></div>
-        <div class="mt-10 text-[20px] flex flex-col gap-10 lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:text-[2vw] lg:justify-between">
-          <FadeInSection client:load><p>I'm 21, music nerd, fashion enthusiast and I like making cool stuff for screens.</p></FadeInSection>
-          <FadeInSection client:load><p>A structured and efficient designer with a <span class="font-bold">love</span> for small details, focused on UX, interaction and prototyping.</p></FadeInSection>
-          <FadeInSection client:load><p>Currently studying MMD at EK in Copenhagen, looking for internship for my 4th semester.</p></FadeInSection>
+        <div class="mt-10 text-md flex flex-col gap-10 lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:text-2xl lg:place-content-center">
+          <p>I'm 21, music nerd, fashion enthusiast and I like making cool stuff for screens.</p>
+          <p>A structured and efficient designer with a <span class="font-bold">love</span> for small details, focused on UX, interaction and prototyping.</p>
+          <p>Currently studying MMD at EK in Copenhagen, looking for internship for my 4th semester.</p>
         </div>
       </aside>
 
       <aside id="myskills" class="mt-20 lg:mb-20">
         <h2 class="text-center font-bold text-[65px] lg:text-[100px]">MY SKILLS</h2>
         <div id="skillcontainer" class="flex flex-col gap-15 text-center mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-3">
-          <FadeInSection client:load>
-            <div>
-              <div class="flex flex-row place-content-center gap-2 lg:col-start-1 lg:row-start-1">
-                <div class="place-content-center w-7"><img src="/UX_icon.svg" alt="UX icon" /></div>
-                <h3 class="text-[35px] font-semibold">UX</h3>
-              </div>
-              <p class="text-[16px] lg:text-[18px] lg:w-112 lg:m-auto">
-                I always factor in the user experience with any design I work on, giving me the ability to ensure a quality experience for the user and understanding how to direct their attention.
-              </p>
+          <div class="skilldiv">
+            <div class="flex flex-row place-content-center gap-2 lg:col-start-1 lg:row-start-1">
+              <div class="place-content-center w-7"><img src="/UX_icon.svg" alt="UX icon" /></div>
+              <h3 class="text-[35px] font-semibold">UX</h3>
             </div>
-          </FadeInSection>
-          <FadeInSection client:load>
-            <div>
-              <div class="flex flex-row place-content-center gap-2 lg:col-start-2 lg:row-start-1">
-                <div class="place-content-center w-7"><img src="/PL_icon.svg" alt="Project lead icon" /></div>
-                <h3 class="text-[35px] font-semibold">PROJECT LEAD</h3>
-              </div>
-              <p class="text-[16px] lg:text-[18px] lg:w-115 lg:m-auto">
-                I enjoy getting work done in good time, and a big part of that is proper project management. I&#39;m often the one taking the initiative to create timelines and ensure everyone is aware of the tasks that need to be done.
-              </p>
+            <p class="text-[16px] lg:text-[18px] lg:w-112 lg:m-auto">
+              I always factor in the user experience with any design I work on, giving me the ability to ensure a quality experience for the user and understanding how to direct their attention.
+            </p>
+          </div>
+
+          <div class="skilldiv">
+            <div class="flex flex-row place-content-center gap-2 lg:col-start-2 lg:row-start-1">
+              <div class="place-content-center w-7"><img src="/PL_icon.svg" alt="Project lead icon" /></div>
+              <h3 class="text-[35px] font-semibold">PROJECT LEAD</h3>
             </div>
-          </FadeInSection>
-          <FadeInSection client:load>
-            <div>
-              <div class="flex flex-row place-content-center gap-2 lg:col-start-1 lg:row-start-2">
-                <div class="place-content-center w-7"><img src="/prototype_icon.svg" alt="prototype icon" /></div>
-                <h3 class="text-[35px] font-semibold">PROTOTYPING</h3>
-              </div>
-              <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">I'm studying primarily web design, though I have much experience coding with Astro, TailwindCSS and AlpineJS which enables me to prototype a wide range of designs.</p>
+            <p class="text-[16px] lg:text-[18px] lg:w-115 lg:m-auto">
+              I enjoy getting work done in good time, and a big part of that is proper project management. I&#39;m often the one taking the initiative to create timelines and ensure everyone is aware of the tasks that need to be done.
+            </p>
+          </div>
+
+          <div class="skilldiv">
+            <div class="flex flex-row place-content-center gap-2 lg:col-start-1 lg:row-start-2">
+              <div class="place-content-center w-7"><img src="/prototype_icon.svg" alt="prototype icon" /></div>
+              <h3 class="text-[35px] font-semibold">PROTOTYPING</h3>
             </div>
-          </FadeInSection>
-          <FadeInSection client:load>
-            <div>
-              <div class="flex flex-row place-content-center gap-2 lg:col-start-2 lg:row-start-2">
-                <div class="place-content-center w-7"><img src="/figma_icon.svg" alt="figma icon" /></div>
-                <h3 class="text-[35px] font-semibold">FIGMA</h3>
-              </div>
-              <p class="text-[16px] lg:text-[18px] lg:w-112 lg:m-auto">I&#39;ve spent many hours learning and designing in Figma, allowing me to make intricate prototypes to test and iterate on, aswell as providing a visual reference when coding.</p>
+            <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">I'm studying primarily web design, though I have much experience coding with Astro, TailwindCSS and AlpineJS which enables me to prototype a wide range of designs.</p>
+          </div>
+
+          <div class="skilldiv">
+            <div class="flex flex-row place-content-center gap-2 lg:col-start-2 lg:row-start-2">
+              <div class="place-content-center w-7"><img src="/figma_icon.svg" alt="figma icon" /></div>
+              <h3 class="text-[35px] font-semibold">FIGMA</h3>
             </div>
-          </FadeInSection>
-          <FadeInSection client:load>
-            <div>
-              <div class="flex flex-row place-content-center gap-2 lg:col-start-1 lg:row-start-3">
-                <div class="place-content-center w-7"><img src="/interact_icon.svg" alt="interactive design icon" /></div>
-                <h3 class="text-[30px] font-semibold">INTERACTIVE DESIGN</h3>
-              </div>
-              <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">Interactions are fundamental to my design, as they serve to guide the user&#39;s journey through a website, aswell as making the design more effective and engaging.</p>
-              <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">Also, animations are fun!</p>
+            <p class="text-[16px] lg:text-[18px] lg:w-112 lg:m-auto">I&#39;ve spent many hours learning and designing in Figma, allowing me to make intricate prototypes to test and iterate on, aswell as providing a visual reference when coding.</p>
+          </div>
+
+          <div class="skilldiv">
+            <div class="flex flex-row place-content-center gap-2 lg:col-start-1 lg:row-start-3">
+              <div class="place-content-center w-7"><img src="/interact_icon.svg" alt="interactive design icon" /></div>
+              <h3 class="text-[30px] font-semibold">INTERACTIVE DESIGN</h3>
             </div>
-          </FadeInSection>
-          <FadeInSection client:load>
-            <div>
-              <div class="flex flex-row place-content-center gap-2 lg:col-start-2 lg:row-start-3">
-                <div class="place-content-center w-7"><img src="/photo_icon.svg" alt="photography icon" /></div>
-                <h3 class="text-[35px] font-semibold">PHOTOGRAPHY</h3>
-              </div>
-              <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">
-                I&#39;ve always had a passion for photography, and though it&#39;s just a hobby, the experience with editing and art directing images, aswell as understanding composition, has translated well to my skills as a Designer.
-              </p>
+            <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">Interactions are fundamental to my design, as they make the design more effective and engaging. My long use with TailwindCSS and Motion One allows me to do this easily.</p>
+            <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">Also, animations are fun!</p>
+          </div>
+
+          <div class="skilldiv">
+            <div class="flex flex-row place-content-center gap-2 lg:col-start-2 lg:row-start-3">
+              <div class="place-content-center w-7"><img src="/photo_icon.svg" alt="photography icon" /></div>
+              <h3 class="text-[35px] font-semibold">PHOTOGRAPHY</h3>
             </div>
-          </FadeInSection>
+            <p class="text-[16px] lg:text-[18px] lg:w-120 lg:m-auto">
+              I&#39;ve always had a passion for photography, and though it&#39;s just a hobby, the experience with editing and art directing images, aswell as understanding composition, has translated well to my skills as a Designer.
+            </p>
+          </div>
         </div>
       </aside>
     </article>
@@ -163,3 +155,27 @@ import FadeInSection from "../components/FadeInSection.jsx";
     </article>
   </section>
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll } from "motion";
+
+  inView("#me", () => {
+    animate(
+      "#me div p",
+      { opacity: [0, 1] },
+      {
+        delay: stagger(0.1, { startDelay: 0.2 }),
+      }
+    );
+  });
+
+  inView("#skillcontainer", () => {
+    animate(
+      "#skillcontainer .skilldiv",
+      { opacity: [0, 1] },
+      {
+        delay: stagger(0.2, { startDelay: 0.2 }),
+      }
+    );
+  });
+</script>
